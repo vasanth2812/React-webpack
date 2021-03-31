@@ -1,5 +1,9 @@
-import './App.scss';
+import Layout from './components/Layout';
 
-const App = () => <div>hello world - {new Date().toString()}</div>;
+const App = () => (
+  <>
+    <Layout />
+  </>
+);
 
 export default App;
