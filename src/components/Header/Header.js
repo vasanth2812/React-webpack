@@ -2,7 +2,6 @@ import {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {
   Navbar,
-  NavbarBrand,
   NavbarToggler,
   Collapse,
   Nav,
@@ -22,9 +21,9 @@ const Header = () => {
     <header>
       <Navbar color="light" expand="md" fixed="top">
         <div className="container">
-          <NavbarBrand href="/">
+          <Link to="/">
             <img src={Logo} alt="Sabka Bazaar" />
-          </NavbarBrand>
+          </Link>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
@@ -38,10 +37,10 @@ const Header = () => {
             <NavbarText>
               <Nav className="mr-auto" navbar>
                 <NavItem>
-                  <Link to="/">SignIn</Link>
+                  <Link to="/login">SignIn</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/">Register</Link>
+                  <Link to="/signup">Register</Link>
                 </NavItem>
               </Nav>
             </NavbarText>
